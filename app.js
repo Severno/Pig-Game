@@ -9,13 +9,16 @@ GAME RULES:
 
 */
 
-var scores, roundScore, activePlayer, dice, gamePlaying, sixRow, dice2, scoresForWin;
+var scores, roundScore, activePlayer, gamePlaying, sixRow, scoresForWin;
 
 init()
 
 document.querySelector('.btn-roll').addEventListener('click', function () {
     if (gamePlaying) {
-        confirmScores()
+        document.querySelector('#inputForScores').value = ''
+        document.querySelector('#scoreButton').style.display = 'none'
+        document.querySelector('#inputForScores').style.display = 'none'
+        // confirmScores()
         var diceDOM = document.querySelector('.dice')
         var dice2DOM = document.querySelector('.dice-2')
 
@@ -138,11 +141,12 @@ document.querySelector('.btn-new').addEventListener('click', init)
 
 
 function confirmScores() {
-    var inputValue = document.querySelector('#inputForScores').value
-
-    if( inputValue == ''){
+    inputValue = document.querySelector('#inputForScores').value
+    scoresForWin = inputValue
+    console.log(scoresForWin)
+    if( inputValue === ''){
         scoresForWin = 100;
-    }else {
+    } else {
         scoresForWin = inputValue
 
     }
