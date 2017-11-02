@@ -170,3 +170,8 @@ i {
     top: 20%;
     left: 42%;
 }
+
+.diceReason{
+    text-align: center;
+    line-height: 40px;
+}
