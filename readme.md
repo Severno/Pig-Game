@@ -1,4 +1,4 @@
-![your alt text](./pig-game.gif)
+![pig-game](./pig-game.gif)
 
 # Правила игры
 1. Необходимо набрать 100 очков для победы.
